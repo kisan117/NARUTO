@@ -68,8 +68,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("💐𝐊𝐚𝐮𝐧𝐬𝐚 𝐌𝐚𝐡𝐢𝐧𝐚 𝐂𝐡𝐚𝐥 𝐑𝐚𝐡𝐚 𝐡𝐚𝐢 🤪💐", threadID);
    };
   
-   if ((event.body.toLowerCase() == "admin") || (event.body.toLowerCase() == "bot owner")) {
-     return api.sendMessage("‎🍁𝐎𝐖𝐍𝐄𝐑🍁:𝄟  𝆺𝅥⃝🧸𝐀𝐀𝐑𝐘𝐀𝐍 𝐒𝐇𝐀𝐑𝐀𝐁𝐈  𝄟\n 𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 ⚡ 𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧⚡. 𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 :- https://www.facebook.com/ARYAN.SHARABI.HERE\nContact Him on WhatsApp :- +919664945791", threadID);
+   if ((event.body.toLowerCase() == "admin") || (event.body.toLowerCase() == "owner")) {
+     return api.sendMessage("‎🍁𝐎𝐖𝐍𝐄𝐑🍁:𝄟  𝆺𝅥⃝🧸𝐀𝐀𝐑𝐘𝐀𝐍 𝐒𝐇𝐀𝐑𝐀𝐁𝐈  𝄟\n 𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 ⚡ 𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧⚡. 𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 :- https://www.facebook.com/MR.AARYAN.HERE \nContact Him on WhatsApp :- +919664945791", threadID);
    };
 
    if ((event.body.toLowerCase() == "tumhe kisne banaya hai") || (event.body.toLowerCase() == "tumko banaya kisne")) {
@@ -84,8 +84,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("💐𝐂𝐡𝐚𝐥𝐨 𝐀𝐛 𝐊𝐞𝐡 𝐁𝐡𝐢 𝐝𝐨 𝐓𝐮𝐌𝐡𝐞 𝐌𝐮𝐣𝐡𝐬𝐞 𝐏𝐲𝐚𝐫 𝐇𝐚𝐢💐", threadID);
    };
   
-   if ((event.body.toLowerCase() == "ਸ਼ਰਾਬੀ ਸ਼ਾਯਰ") || (event.body.toLowerCase() == "@ਸ਼ਰਾਬੀ ਸ਼ਾਯਰ")) {
-     return api.sendMessage("💐Happy bhatti-Nona ਕਾਕਾ-ਸ਼ਰਾਬੀ ਸ਼ਾਯਰ ਚੰਗੇ ਦੋਸਤ ਹੈ 🫂😜🎉😍😍🤭💐", threadID);
+   if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
+     return api.sendMessage("💐🤘🤟चिन टपाक डम डम 🤘🤟💐", threadID);
    };
 
    if ((event.body.toLowerCase() == "shadi karoge") || (event.body.toLowerCase() == "mujhse shadi karoge?")) {
@@ -153,7 +153,7 @@ if ((event.body.toLowerCase() == "aaryan") || (event.body.toLowerCase() == "arya
    };
 
    if ((event.body.toLowerCase() == "kese ho") || (event.body.toLowerCase() == "kaise ho") || (event.body.toLowerCase() == "kese ho ji") || (event.body.toLowerCase() == "how are you") || (event.body.toLowerCase() == "kaisi ho")) {
-     return api.sendMessage("💐𝐌𝐚𝐢 𝐀𝐡𝐡𝐚 𝐇𝐮 𝐌𝐞𝐫𝐢 𝐉𝐚𝐚𝐧 𝐀𝐚𝐩 𝐛𝐭𝐚𝐨☺️💐", threadID);
+     return api.sendMessage("💐𝐌𝐚𝐢 𝐀𝐜𝐡𝐡𝐚 𝐇𝐮 𝐌𝐞𝐫𝐢 𝐉𝐚𝐚𝐧 𝐀𝐚𝐩 𝐛𝐭𝐚𝐨☺️💐", threadID);
    };
 
    if ((event.body.toLowerCase() == "ka hua") || (event.body.toLowerCase() == "kya hua jii")) {
