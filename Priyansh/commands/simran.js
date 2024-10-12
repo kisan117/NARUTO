@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "simran",
+	name: "mahira",
     version: "1.0.1",
 	hasPermssion: 0,
 	credits: "VanHung - Fixed by Ishika", 
@@ -12,10 +12,10 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Simran")==0 || event.body.indexOf("@Simran")==0 || event.body.indexOf("SIMRAN")==0 || event.body.indexOf("simran")==0) {
+	if (event.body.indexOf("mahira")==0 || event.body.indexOf("@Mahira")==0 || event.body.indexOf("MAHIRA")==0 || event.body.indexOf("@MAHIRA")==0) {
 		var msg = {
-				body: "😍 𝐘𝐄 𝐋𝐎 𝐒𝐈𝐌𝐑𝐀𝐍 𝐑𝐀𝐍𝐈 𝐀𝐀 𝐆𝐘𝐈⚣︎⚣︎😍😍😍",
-				attachment: fs.createReadStream(__dirname + `/cache/simran.jpg`)
+				body: "😍 𝐘𝐄 𝐋𝐎 𝐌𝐀𝐇𝐈𝐑𝐀 𝐀𝐍𝐒𝐀𝐑𝐈 𝐀𝐀 𝐆𝐘𝐈⚣︎⚣︎😍😍😍",
+				attachment: fs.createReadStream(__dirname + `/cache/mahira.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("💎", event.messageID, (err) => {}, true)
