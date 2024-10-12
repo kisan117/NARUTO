@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	if (event.body.indexOf("mahira")==0 || event.body.indexOf("@Mahira")==0 || event.body.indexOf("MAHIRA")==0 || event.body.indexOf("@MAHIRA")==0) {
 		var msg = {
 				body: "😍 𝐘𝐄 𝐋𝐎 𝐌𝐀𝐇𝐈𝐑𝐀 𝐀𝐍𝐒𝐀𝐑𝐈 𝐀𝐀 𝐆𝐘𝐈⚣︎⚣︎😍😍😍",
-				attachment: fs.createReadStream(__dirname + `/cache/mahira.jpg`)
+				attachment: fs.createReadStream(__dirname + `/cache/mahira.jpeg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("💎", event.messageID, (err) => {}, true)
