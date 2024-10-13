@@ -1,22 +1,26 @@
+mconst fs = require("fs");
 module.exports.config = {
-  name: "welcome",
-  version: "7.3.1",
+  name: "wlcm",
+    version: "1.1.1",
   hasPermssion: 0,
-  credits: "John Lester", 
+  credits: "𝐏𝐑𝐈𝐘𝐀𝐍𝐒𝐇𝐈 𝐊𝐀𝐔𝐑", 
   description: "Just Respond",
   commandCategory: "no prefix",
     cooldowns: 5, 
 };
 
-module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
+module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-  var name = await Users.getNameUser(event.senderID);
-  if (event.body.indexOf("welcome")>=0 || event.body.indexOf("Welcome")>=0 || event.body.indexOf("wel")>=0 || event.body.indexOf("belcum")>=0 || event.body.indexOf("स्वागत")>=0 || event.body.indexOf("WELCOME")>=0 || event.body.indexOf("स्वागतम्")>=0 || event.body.indexOf("स्वागतम")>=0 || event.body.indexOf("WEL")>=0 || event.body.indexOf("Wel")>=0 ) { 
+  let react = event.body.toLowerCase();
+  if(react.includes("welcome") ||
+     react.includes("Welcome") || react.includes("wlcm") || react.includes("Wlcm") ||
+react.includes("swagat") ||
+react.includes("Swagat")) {
     var msg = {
-        body: ` धन्यवाद 🙂🖐️ ${name} बाबू😍😘👈 `
+        body: `🥰𝐖𝐄𝐋𝐂𝐎𝐌𝐄💋 𝐇𝐎😘 𝐆𝐀𝐘À À𝐏𝐊À  Ç𝐇𝐔𝐌𝐌𝐀💋 𝐌𝐀𝐀𝐑 𝐊𝐄 𝐁À𝐁𝐘💋🙃👈`,
       }
       api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("📞", event.messageID, (err) => {}, true)
+    api.setMessageReaction("🤗", event.messageID, (err) => {}, true)
     }
   }
   module.exports.run = function({ api, event, client, __GLOBAL }) {
