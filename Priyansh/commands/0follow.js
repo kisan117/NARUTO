@@ -15,7 +15,10 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	if (event.body.indexOf("Follow")==0 || event.body.indexOf("follow")==0 || event.body.indexOf("insta")==0 || event.body.indexOf("Insta")==0) {
 		var msg = {
 				body: "👋For Any Kind Of Help Contact On Instagram Username 👉 @aaryan_maurya_99",
-				attachment: fs.createReadStream(__dirname + `/noprefix/follow.mp3`)
+				attachment: 
+
+
+eam(__dirname + `/noprefix/follow.mp3`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🦋", event.messageID, (err) => {}, true)
