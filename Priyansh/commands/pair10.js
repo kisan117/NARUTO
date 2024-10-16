@@ -12,7 +12,10 @@ module.exports.config = {
     }
 }
 module.exports.onLoad = async() => {
-    const { resolve } = global.nodemodule["path"];
+    const { resolve } = global
+
+
+.nodemodule["path"];
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
