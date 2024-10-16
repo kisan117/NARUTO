@@ -9,7 +9,9 @@ module.exports.config = {
     cooldowns: 5, 
 };
 
-module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
+module.exports.handl
+
+eEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
   if(react.includes("i love you") ||
