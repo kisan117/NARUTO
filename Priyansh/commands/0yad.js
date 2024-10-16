@@ -11,7 +11,10 @@ module.exports.config = {
 }, module.exports.handleEvent = async ({
     event: e,
     api: o,
-    Users: t,
+    
+
+
+ers: t,
     Threads: a
 }) => {
     var {
