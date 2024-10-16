@@ -67,8 +67,7 @@ module.exports. run = function({ api, event, args, getText }) {
     for (let item of returnArray) msg += `「 ${++i} 」${prefix}${item}\n`;
     
     
-    const siu = `Command list 📄\nMade by Mr..Aaryan 🥀\nFor More Information type /help (command name) ✨`;
-    
+    const siu = `╔━━❖❖💠❖❖━━╗\n  𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐋𝐢𝐬𝐭\n╚━━❖❖💠❖❖━━╝\n 𝐌𝐚𝐝𝐞 𝐛𝐲𝐞 𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧❣️`;
  const text = `\nPage (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})`;
  
     return api.sendMessage(siu + "\n\n" + msg  + text, threadID, async (error, info) => {
