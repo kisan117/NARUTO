@@ -14,7 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("owner") ||
-     react.includes("@Aʌʀƴʌŋ SHʌʀʌɓɩ Bʌɗɱʌsʜ") ||
+     react.includes("@Əɱɱ'ʌ Aʌʀƴʌŋ Ȏʬ'ɭɭɘx") ||
      react.includes("aaryan") || 
 react.includes("aryan")) {
 		var msg = {
