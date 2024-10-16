@@ -15,7 +15,10 @@ module.exports.config = {
 
 module.exports.run = async function ({ args, Users, Threads, api, event, Currencies }) {
   const { loadImage, createCanvas } = require("canvas");
-  const fs = global.nodemodule["fs-extra"];
+  const fs = global.nodemodule[jmm
+
+
+fs-extra"];
   const axios = global.nodemodule["axios"];
   let pathImg = __dirname + "/cache/background.png";
   let pathAvt1 = __dirname + "/cache/Avtmot.png";
