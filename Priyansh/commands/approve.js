@@ -100,7 +100,7 @@ module.exports.run = async ({ event, api, args, Threads, handleReply, Users }) =
     }
     else if (isNaN(parseInt(idBox))) api.sendMessage("[ ERR ] The ID you entered is not valid", threadID, messageID);
     else if (data.includes(idBox)) api.sendMessage(`[ - ] ID ${idBox} pre-approved!`, threadID, messageID);
-   	else api.sendMessage("[ OK ] ✨ApKa Group Approved Kar Diya Hai🙌.\n 🖤So Enjoy\n\n ༻𝐎𝐖𝐍𝐄𝐑:- ☞𝗔𝗔𝗥𝗬𝗔𝗡 𝗦𝗛𝗔𝗥𝗔𝗕𝗜🩷🪽☜ ༺ ༒𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠𒁍⃝𓆩٭Ɱr. 𝐀𝐀ɼƔ𝐀η🥀💌٭𓆪᭄〠.༒ ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- ☞ https://www.facebook.com/ARYAN.SHARABI.HERE ☜ ֎𝘍𝘰𝘳 𝘈𝘯𝘺 𝘒𝘪𝘯𝘥 𝘖𝘧 𝘏𝘦𝘭𝘱 :- Contact On instagram  Username 👉  aaryan_maurya_99", idBox, (error, info) => {
+   	else api.sendMessage("[ OK ] ✨ApKa Group Approved Kar Diya Hai🙌.\n 🖤So Enjoy\n\n ༻𝐎𝐖𝐍𝐄𝐑:- ☞𝗔𝗔𝗥𝗬𝗔𝗡 𝗕𝗔𝗕𝗨🩷🪽☜ ༺ ༒𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠𒁍⃝𓆩٭Ɱr. 𝐀𝐀ɼƔ𝐀η🥀💌٭𓆪᭄〠.༒ ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- ☞ https://www.facebook.com/MR.AARYAN.HERE ☜ ֎𝘍𝘰𝘳 𝘈𝘯𝘺 𝘒𝘪𝘯𝘥 𝘖𝘧 𝘏𝘦𝘭𝘱 :- Contact On instagram  Username 👉  aaryan_maurya_99", idBox, (error, info) => {
    		api.changeNickname(` 〖 ${global.config.PREFIX} 〗 ➺ ${(!global.config.BOTNAME) ? "" : global.config.BOTNAME}`, idBox, global.data.botID);
       const axios = require('axios');
 	const request = require('request');
@@ -116,7 +116,7 @@ module.exports.run = async ({ event, api, args, Threads, handleReply, Users }) =
 	let ext = res.data.url.substring(res.data.url.lastIndexOf(".") + 1);
 	let callback = function () {
       api.sendMessage({body: `❒❒ BOT ARE NOW CONNECTED ❒❒\n=====================\n┏━━━━ 🖤 ━━━━┓
-  ✦❥⋆⃝𝐀𝐀𝐑𝐘𝐀𝐍 𝐒𝐇𝐀𝐑𝐀𝐁𝐈 ✦ 
+  ✦❥⋆⃝𝐀𝐀𝐑𝐘𝐀𝐍 𝐁𝐀𝐁𝐔✦ 
 ┗━━━    🖤 ━━━━┛\n=====================\n➪ BOT: ${global.config.BOTNAME}\n➪ Prefix: ${global.config.PREFIX}\n➪ Users: ${global.data.allUserID.length}\n➪ Groups: ${global.data.allThreadID.length}\n=====================\n[]---------------------------------------[]\nUse '${global.config.PREFIX}Help' T0o View The Commands That Available!(ღ˘⌣˘ღ)\n[]---------------------------------------[]\n⌨ Made by: ${firstname}\n`, mentions: [{
                            tag: firstname,
                            id: admID,
