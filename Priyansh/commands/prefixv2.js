@@ -1,12 +1,4 @@
-const sendWaiting = true; // bật hoặc tắt gửi tin nhắn "đang tạo hình ảnh, vui ồng chờ đợi...";
-const textWaiting = "Đang khởi tạo hình ảnh, vui lòng chờ đợi trong giây lát";
-const fonts = "/cache/Play-Bold.ttf"
-const downfonts = "https://drive.google.com/u/0/uc?id=1uni8AiYk7prdrC7hgAmezaGTMH5R8gW8&export=download"
-const fontsLink = 20
-const fontsInfo = 28
-const colorName = "#00FFFF"
-
-module.exports.config = {
+ module.exports.config = {
   name: "prefixv2",
   version: "2.0.0",
   hasPermssion: 0,
