@@ -54,7 +54,7 @@ module.exports. run = function({ api, event, args, getText }) {
     let msg = "";
     
     for (var [name, value] of (commands)) {
-      name += `💙🍒💦`;
+      name += ``;
       arrayInfo.push(name);
     }
 
