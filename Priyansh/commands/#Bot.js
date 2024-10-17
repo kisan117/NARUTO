@@ -187,7 +187,7 @@ if ((event.body.toLowerCase() == "aaryan") || (event.body.toLowerCase() == "arya
           ${rand} 🤣🍁❤
 
 
-       *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ༄𒁍≛⃝𝐀𝐚𝐫𝐲𝐚𝐧 𝐁𝐚𝐛𝐮☘️`
+       *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ༄𒁍≛⃝𝗠𝗿.𝗔𝗮𝗿𝘆𝗮𝗻❣️☘️`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
