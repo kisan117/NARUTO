@@ -25,13 +25,13 @@ var rand = tl[Math.floor(Math.random() * tl.length)]
    };
    mess = "{name}"
 
-  if (event.body.indexOf("Babu") == 0 || (event.body.indexOf("@MOTU BOT") == 0 || (event.body.indexOf("mot")) == 0)) {
+  if (event.body.indexOf("Babu") == 0 || (event.body.indexOf("@DEVIL BOT") == 0 || (event.body.indexOf("mot")) == 0)) {
     var msg = {
       body: `🌴🪻🪴${name}🌲🪷🌿, \n\n
           ${rand} 🍀🌺💦
 
 
-           * ཫ༄𒁍≛⃝𝐀𝐚𝐫𝐲𝐚𝐧 𝐁𝐚𝐛𝐮🍒`
+           * ཫ༄𒁍≛⃝𝐌𝐫 𝐃𝐞𝐯𝐢𝐥🍒`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
