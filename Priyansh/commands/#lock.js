@@ -4,11 +4,11 @@ const fs = require("fs"),
 module.exports.config = {
   name: "lock",
   version: "beta",
-  hasPermission: 1,   // typo ठीक किया hasPermssion => hasPermission
+  hasPermission: 1,
   credits: "SHANKAR SUMAN",
   description: "Cấm đổi tên nhóm!",
   commandCategory: "Hệ thống quản trị viên",
-  usages: "antinamebot on/off",
+  usages: "lock on/off",
   cooldowns: 0
 };
 
@@ -21,58 +21,60 @@ module.exports.onLoad = () => {
   if (!fs.existsSync(path)) fs.writeFileSync(path, JSON.stringify({}));
 };
 
-module.exports.handleEvent = async function ({ api, event, Threads, permssion }) {
-  const { threadID, messageID, senderID, isGroup, author } = event;
+module.exports.handleEvent = async function ({ api, event, Threads, permission }) {
+  const { threadID, isGroup } = event;
 
-  if (isGroup == true) {
-    let data = JSON.parse(fs.readFileSync(path));
-    let dataThread = (await Threads.getData(threadID)).threadInfo || {};
-    const threadName = dataThread.threadName;
-    if (!data[threadID]) {
-      data[threadID] = {
-        namebox: threadName,
-        status: true
-      };
-      fs.writeFileSync(path, JSON.stringify(data, null, 2));
-    }
-    if (data[threadID].namebox == null || threadName == undefined || threadName == null) return;
+  if (!isGroup) return;
 
-    else if (threadName != data[threadID].namebox && data[threadID].status == false) {
-      data[threadID].namebox = threadName;
-      fs.writeFileSync(path, JSON.stringify(data, null, 2));
-    }
-
-    if (threadName != data[threadID].namebox && data[threadID].status == true) {
-      return api.setTitle(
-        data[threadID].namebox,
-        threadID,
-        () => {
-          api.sendMessage(
-            `${NONPREFIX(threadID)}`, // ये तो यूजर का मैसेज लगता है, ठीक है तो छोड़ रहा हूँ
-            threadID
-          );
-        }
-      );
-    }
-  }
-};
-
-module.exports.run = async function ({ api, event, permssion, Threads }) {
-  const { threadID, messageID } = event;
-  if (permssion == 0) return api.sendMessage("⚡ Chỉ quản trị viên được bật/tắt!", threadID);
   let data = JSON.parse(fs.readFileSync(path));
-  let dataThread = (await Threads.getData(threadID)).threadInfo;
+  let dataThread = (await Threads.getData(threadID)).threadInfo || {};
   const threadName = dataThread.threadName;
 
-  if (data[threadID].status == false) {
+  if (!data[threadID]) {
     data[threadID] = {
       namebox: threadName,
       status: true
     };
-  } else data[threadID].status = false;
+    fs.writeFileSync(path, JSON.stringify(data, null, 2));
+  }
+
+  if (data[threadID].namebox == null || threadName == undefined || threadName == null) return;
+
+  if (threadName != data[threadID].namebox && data[threadID].status == false) {
+    data[threadID].namebox = threadName;
+    fs.writeFileSync(path, JSON.stringify(data, null, 2));
+  }
+
+  if (threadName != data[threadID].namebox && data[threadID].status == true) {
+    return api.setTitle(
+      data[threadID].namebox,
+      threadID,
+      () => {
+        api.sendMessage(`${NONPREFIX(threadID)}`, threadID);
+      }
+    );
+  }
+};
+
+module.exports.run = async function ({ api, event, permission, Threads }) {
+  const { threadID } = event;
+  if (permission == 0) return api.sendMessage("⚡ Chỉ quản trị viên được bật/tắt!", threadID);
+  let data = JSON.parse(fs.readFileSync(path));
+  let dataThread = (await Threads.getData(threadID)).threadInfo;
+  const threadName = dataThread.threadName;
+
+  if (!data[threadID]) {
+    data[threadID] = {
+      namebox: threadName,
+      status: true
+    };
+  }
+
+  data[threadID].status = !data[threadID].status;
   fs.writeFileSync(path, JSON.stringify(data, null, 2));
+
   api.sendMessage(
-    `✅ मेरे बॉस डेविल शराबी ने ${data[threadID].status == true ? `ग्रुप नाम लॉक कर दिया` : `ग्रुप नाम अनलॉक कर दिया`} लव यू डेविल शराबी`,
+    `✅ मेरे बॉस डेविल शराबी ने ${data[threadID].status ? "ग्रुप नाम लॉक कर दिया" : "ग्रुप नाम अनलॉक कर दिया"} लव यू डेविल शराबी`,
     threadID
   );
 };
